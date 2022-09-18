@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Bullet(Sprite):
     """Manages bullets fired by the ship"""
 
@@ -19,8 +20,8 @@ class Bullet(Sprite):
 
     def update(self):
         """Changes bullet location as it travels across the screen"""
-        self.y -= self.settings.bullet_speed # decimal position
-        self.rect.y =self.y # rect position
+        self.y -= self.settings.bullet_speed  # decimal position
+        self.rect.y = self.y  # rect position
 
     def draw_bullet(self):
         """Draws the bullet to the screen at its current rect"""
