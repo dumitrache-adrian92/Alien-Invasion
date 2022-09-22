@@ -146,11 +146,14 @@ class AlienInvasion:
             self.sb.check_high_score()
 
         if not self.aliens:
-            self.bullets.empty()
-            self._create_fleet()
-            self.settings.increase_speed()
-            self.stats.level += 1
-            self.sb.prep_level()
+            self._new_level()
+
+    def _new_level(self):
+        self.bullets.empty()
+        self._create_fleet()
+        self.settings.increase_speed()
+        self.stats.level += 1
+        self.sb.prep_level()
 
     def _check_bottom(self):
         """Checks if aliens have reached the bottom of the screen"""
