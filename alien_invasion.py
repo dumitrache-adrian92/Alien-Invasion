@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from curses import start_color
 from re import L
 import sys
